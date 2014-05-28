@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Happy Hour [H²]</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <!-- include font-icons -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="list-block">
+        <ul>
+          <li>
+            <a href="index.html" class="item-link close-panel">
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">HOME</div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="item-link close-panel">
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Perto de mim</div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="item-link close-panel">
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Buscar por bairro</div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="item-link close-panel">
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Leitor QRCode</div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="item-link close-panel">
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Mensagens</div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="item-link close-panel">
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Críticas e Sugestões</div>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar top-navbar">
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="left">
+              <a href="#" class="link icon-only open-panel"><i class="icon icon-bars-white"></i></a>
+            </div>
+            <div class="center sliding">Happy Hour [H²]</div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <div class="mapa"></div>
+              <span class="geolocate geolocate-user"></span>
+              <a href="bar.html" class="item-link">
+                <span class="geolocate geolocate-bar" style="top: 15%; left: 20%;"></span>
+              </a>
+              <a href="agenda.html" class="item-link">
+                <span class="geolocate geolocate-bar" style="top: 10%; left: 80%;"></span>
+              </a>
+              <a href="bar.html" class="item-link">
+                <span class="geolocate geolocate-bar" style="top: 60%; left: 10%;"></span>
+              </a>
+              <a href="bar.html" class="item-link">
+                <span class="geolocate geolocate-bar" style="top: 65%; left: 70%;"></span>
+              </a>
+              <a href="bar.html" class="item-link">
+                <span class="geolocate geolocate-bar" style="top: 80%; left: 30%;"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>

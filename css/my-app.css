@@ -1,0 +1,90 @@
+.panel-left{
+	background: #1D202E;
+}
+
+.panel-left .list-block ul {
+  background: #1D202E; color: #fff;
+  border: 0px;
+}
+
+.panel-left .list-block ul li{
+	border-top: 1px solid #3C4052;
+	border-bottom: 1px solid #161924;
+}
+
+.panel-left .list-block .item-inner{
+	border: 0px;
+}
+
+.panel-left .list-block .item-link:active{
+	background-color: #475669;
+}
+
+.top-navbar{
+	background-color: rgba(255, 119, 31, 0.8);
+	color: #fff;
+	border: 0px;
+	box-shadow: 0px 0px 6px #000;
+}
+.top-navbar a.link{
+	color: #fff;
+}
+
+i.icon.icon-bars-white {
+background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 42 26' fill='%23fff'><rect x='0' y='1' width='42' height='4'/><rect x='0' y='11' width='42' height='4'/><rect x='0' y='22' width='42' height='4'/></svg>");
+}
+
+.mapa{position: absolute; top: 0px; left: 0px; background: url('../img/mapa.jpg') center center no-repeat; width: 100%; height: 100%;}
+
+.geolocate{
+	position: absolute; display: block;
+}
+
+.geolocate.geolocate-bar{
+	width: 27px; height: 35px; background: url('../img/geolocate-bar.png') top center no-repeat;
+}
+
+.geolocate.geolocate-user{
+	width: 40px; height: 52px; background: url('../img/geolocate-user.png') top center no-repeat; top: 44%; left: 42%;
+}
+
+.topo-bar{
+	overflow-x: hidden;
+}
+
+.topo-bar img.banner-topo-bar { 
+	height: 100%; max-height: 140px; width: auto; position: relative;
+}
+
+img.logo-bar { 
+	width: 100px; height: 100px; position: relative; margin-top: -60px; border: 3px solid #FF771F; box-shadow: 0px 0px 6px #000; border-radius: 6px; display: block; float: left;
+}
+
+.desc-topo {
+	width: 180px; margin: -45px 0 0 10px; float: left; display: block;
+}
+
+.desc-topo .fa{
+	color: #FF771F;
+}
+
+.desc-topo .mesa{
+	width: 50px; height: 50px; display: block; background: url('../img/mesa.png') top left no-repeat; background-size: contain;
+}
+
+.desc-topo .qtd-mesa{
+	font-size: 20px; font-weight: 700; color: #333; margin: 20px 0 -20px 0;
+	text-shadow: 2px 0 0 #efeff4, -2px 0 0 #efeff4, 0 2px 0 #efeff4, 0 -2px 0 #efeff4, 1px 1px #efeff4, -1px -1px 0 #efeff4, 1px -1px 0 #efeff4, -1px 1px 0 #efeff4;
+}
+
+.fa-dollar.off{
+	color: #bbb;
+}
+
+.list-block{
+	margin: 0px;
+}
+
+.clear{
+	clear: both;
+}
