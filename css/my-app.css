@@ -36,16 +36,12 @@ background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w
 
 .mapa{position: absolute; top: 0px; left: 0px; background: url('../img/mapa.jpg') center center no-repeat; width: 100%; height: 100%;}
 
-.geolocate{
-	position: absolute; display: block;
+.geolocate-bar{
+	position: absolute; display: block; width: 27px; height: 35px; background: url('../img/geolocate-bar.png') top center no-repeat;
 }
 
-.geolocate.geolocate-bar{
-	width: 27px; height: 35px; background: url('../img/geolocate-bar.png') top center no-repeat;
-}
-
-.geolocate.geolocate-user{
-	width: 40px; height: 52px; background: url('../img/geolocate-user.png') top center no-repeat; top: 44%; left: 42%;
+.geolocate-user{
+	position: absolute; display: block; width: 40px; height: 52px; background: url('../img/geolocate-user.png') top center no-repeat; top: 44%; left: 42%;
 }
 
 .topo-bar{
@@ -53,11 +49,11 @@ background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w
 }
 
 .topo-bar img.banner-topo-bar { 
-	height: 100%; max-height: 140px; width: auto; position: relative;
+	height: auto; width: 100%; position: relative;
 }
 
 img.logo-bar { 
-	width: 100px; height: 100px; position: relative; margin-top: -60px; border: 3px solid #FF771F; box-shadow: 0px 0px 6px #000; border-radius: 6px; display: block; float: left;
+	width: 100%; height: auto; position: relative; margin-top: -60px; border: 3px solid #FF771F; box-shadow: 0px 0px 6px #000; border-radius: 6px; display: block; float: left; margin-bottom: 15px;
 }
 
 .desc-topo {
