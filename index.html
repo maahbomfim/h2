@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="css/my-app.css">
     <!-- include font-icons -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- include firebase -->
-    <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
   </head>
   <body>
     <!-- Status bar overlay for fullscreen mode-->
@@ -128,5 +126,19 @@
     <script type="text/javascript" src="js/framework7.min.js"></script>
     <!-- Path to your app js-->
     <script type="text/javascript" src="js/my-app.js"></script>
+    <!-- include firebase -->
+    <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+
+    <script type="text/javascript">
+      //init firebase
+      var myRootRef = new Firebase('https://happyhourh2.firebaseio.com/');
+      myRootRef.set({
+        title: 'Hello World!'
+      });
+
+      myRootRef.child('title').on('value', function(snapshot) {
+        alert(snapshot.val());  // Alerts 'Hello Word!'
+      });
+    </script>
   </body>
 </html>
