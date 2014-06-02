@@ -23,10 +23,10 @@
       <div class="list-block">
         <ul>
           <li>
-            <a href="index.html" class="item-link close-panel">
+            <a href="index.html" class="item-link close-panel back-to-home">
               <div class="item-content">
                 <div class="item-inner">
-                  <div class="item-title">HOME</div>
+                  <div class="item-title"->HOME</div>
                 </div>
               </div>
             </a>
@@ -101,19 +101,19 @@
             <div class="page-content">
               <div class="mapa"></div>
               <span class="geolocate geolocate-user"></span>
-              <a href="bar.html" class="item-link">
+              <a href="bar.html" class="item-link" onClick="getRefBar(1)">
                 <span class="geolocate geolocate-bar" style="top: 15%; left: 20%;"></span>
               </a>
-              <a href="agenda.html" class="item-link">
+              <a href="bar.html" class="item-link" onClick="getRefBar(2)">
                 <span class="geolocate geolocate-bar" style="top: 10%; left: 80%;"></span>
               </a>
-              <a href="bar.html" class="item-link">
+              <a href="bar.html" class="item-link" onClick="getRefBar(3)">
                 <span class="geolocate geolocate-bar" style="top: 60%; left: 10%;"></span>
               </a>
-              <a href="bar.html" class="item-link">
+              <a href="bar.html" class="item-link" onClick="getRefBar(4)">
                 <span class="geolocate geolocate-bar" style="top: 65%; left: 70%;"></span>
               </a>
-              <a href="bar.html" class="item-link">
+              <a href="bar.html" class="item-link" onClick="getRefBar(5)">
                 <span class="geolocate geolocate-bar" style="top: 80%; left: 30%;"></span>
               </a>
             </div>
@@ -128,17 +128,25 @@
     <script type="text/javascript" src="js/my-app.js"></script>
     <!-- include firebase -->
     <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+    <!-- include jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <script type="text/javascript">
       //init firebase
       var myRootRef = new Firebase('https://happyhourh2.firebaseio.com/');
-      myRootRef.set({
-        title: 'Hello World!'
-      });
 
-      myRootRef.child('title').on('value', function(snapshot) {
-        alert(snapshot.val());  // Alerts 'Hello Word!'
-      });
+      function getRefBar(idBar){
+        var barRef = new Firebase('https://happyhourh2.firebaseio.com/bares/'+idBar+'/');
+        barRef.on('value', function(snapshot) {
+          if(snapshot.val() === null) {
+            $('.nome-bar').html('Não encontrado');
+            $('[data-page=bar] .page-content').html('<p>Ops =(<br><br>Bar não encontrado</p><br><p><a href="#" class="back link"><i class="icon icon-back-blue"></i><span> Back</span></a></p>');
+          } else {
+            var nome = snapshot.val().nome;
+            $('.nome-bar').html(nome);
+          }
+        });
+      }
     </script>
   </body>
 </html>
